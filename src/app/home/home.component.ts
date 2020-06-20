@@ -16,8 +16,11 @@ export class HomeComponent implements OnInit {
   constructor(private homeService: HomeService) { }
 
   ngOnInit() {
+    //  API Call to get the list of  all the cities.
     this.homeService.getCityList().subscribe(res => {
+      //  API call for the details of all the selected Cities.
       this.homeService.getCityDetails(res.map(response => response.id)).pipe(
+        //  Updating Cities Subject.
         map(cities =>{
           this.cities$.next(cities);
         })

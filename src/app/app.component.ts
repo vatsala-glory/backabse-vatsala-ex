@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {setTheme} from 'ngx-bootstrap/utils';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'backbase-weather-app';
+  constructor(){
+    //  set Theme with bootstrap 4.
+    setTheme("bs4");
+  }
 }

@@ -22,6 +22,10 @@ export class HomeService {
     ])
   }
 
+  /**
+   * 
+   * @param cities - All the cities in an array;
+   */
   getCityDetails(...cities){
     return this.htttp.get(`${environment.apiUrl}${environment.endpoints.getCities}?id=${[...cities].join()}&units=metric&appid=${environment.apiKey}`)
     .pipe(

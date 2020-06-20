@@ -12,6 +12,8 @@ import { ListComponent } from './components/list/list.component';
 import { HomeService } from './home/home.service';
 import { AppInterceptorService } from './app-interceptor.service';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,10 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    TypeaheadModule.forRoot(),
+    FormsModule
+    
   ],
   providers: [HomeService,
     {
