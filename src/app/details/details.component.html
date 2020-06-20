@@ -1,1 +1,3 @@
-<p>details works!</p>
+<div *ngIf="weatherDetails$ | async as details ">
+<app-perday-temp [perDayData]="details.list"></app-perday-temp>
+</div>

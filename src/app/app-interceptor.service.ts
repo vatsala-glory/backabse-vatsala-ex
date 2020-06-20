@@ -12,6 +12,7 @@ export class AppInterceptorService  implements HttpInterceptor{
 
   constructor() { }
   intercept(request: HttpRequest<any>, next: HttpHandler) {
+    // TODO: add loader for all the APIS calls
     request.params.set('appid', '808885554400103a97cf49c31301320a');
     request.params.set('units', 'metric') ;
     return next.handle(request);

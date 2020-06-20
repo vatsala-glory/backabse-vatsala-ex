@@ -14,6 +14,9 @@ import { AppInterceptorService } from './app-interceptor.service';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
 import { FormsModule } from '@angular/forms';
+import { DetailsService } from './details/details.service';
+import { PerhourTempComponent } from './components/perhour-temp/perhour-temp.component';
+import { PerdayTempComponent } from './components/perday-temp/perday-temp.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,9 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     NavBarComponent,
     DetailsComponent,
-    ListComponent
+    ListComponent,
+    PerhourTempComponent,
+    PerdayTempComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +39,7 @@ import { FormsModule } from '@angular/forms';
     
   ],
   providers: [HomeService,
+    DetailsService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AppInterceptorService,

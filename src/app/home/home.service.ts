@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment';
 })
 export class HomeService {
 
-  constructor(private htttp: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
   getCityList(): Observable<CityList[]>{
     return of([
@@ -27,7 +27,7 @@ export class HomeService {
    * @param cities - All the cities in an array;
    */
   getCityDetails(...cities){
-    return this.htttp.get(`${environment.apiUrl}${environment.endpoints.getCities}?id=${[...cities].join()}&units=metric&appid=${environment.apiKey}`)
+    return this.http.get(`${environment.apiUrl}${environment.endpoints.getCities}?id=${[...cities].join()}&units=metric&appid=${environment.apiKey}`)
     .pipe(
       map(res => res));
   }
