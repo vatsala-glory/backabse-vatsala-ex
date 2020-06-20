@@ -12,6 +12,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 export class DetailsComponent implements OnInit {
   weatherDetails$: BehaviorSubject<any> = new BehaviorSubject<any>(null);
   currentCityId:Observable<string>;
+  loading: boolean = true;
   constructor(private detailsService: DetailsService,
     private route: ActivatedRoute) { }
 
@@ -42,7 +43,7 @@ export class DetailsComponent implements OnInit {
           this.weatherDetails$.next(details);
         })
       ).subscribe(()=> {
-                
+            this.loading = false; 
       })
     })
   }

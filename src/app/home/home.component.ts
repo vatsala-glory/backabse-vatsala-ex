@@ -10,7 +10,7 @@ import { map} from 'rxjs/operators'
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  loading: boolean;
+  loading: boolean = true;
   cities$: Subject<any> = new Subject<any>();
 
   constructor(private homeService: HomeService) { }

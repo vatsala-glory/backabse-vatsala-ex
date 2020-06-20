@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { CityList } from './home';
 import { of, Observable } from 'rxjs';
-import { map } from 'rxjs/operators'
+import { map , delay} from 'rxjs/operators'
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
@@ -29,6 +29,7 @@ export class HomeService {
   getCityDetails(...cities){
     return this.http.get(`${environment.apiUrl}${environment.endpoints.getCities}?id=${[...cities].join()}&units=metric&appid=${environment.apiKey}`)
     .pipe(
+      delay(300),
       map(res => res));
   }
 }

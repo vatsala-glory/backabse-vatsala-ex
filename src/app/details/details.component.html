@@ -4,5 +4,8 @@
             {{details.city.name}}
         </h1>
     </div>
-<app-perday-temp [perDayData]="details.list"></app-perday-temp>
+    <app-perday-temp [perDayData]="details.list"></app-perday-temp>
+</div>
+<div *ngIf="loading">
+    <app-loader></app-loader>
 </div>
