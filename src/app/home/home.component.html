@@ -1,0 +1,7 @@
+
+<div *ngIf="cities$ | async as cities">
+    <div *ngFor="let city of cities.list">
+        <app-list [data]="city"></app-list>
+    </div>
+</div>
+   
