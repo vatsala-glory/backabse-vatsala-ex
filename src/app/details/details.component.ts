@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DetailsService } from './details.service';
 import { ActivatedRoute } from '@angular/router';
-import {  switchMap, map } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 import { BehaviorSubject, Observable } from 'rxjs';
 
 @Component({
@@ -13,6 +13,7 @@ export class DetailsComponent implements OnInit {
   weatherDetails$: BehaviorSubject<any> = new BehaviorSubject<any>(null);
   currentCityId:Observable<string>;
   loading: boolean = true;
+  error: boolean = false;
   constructor(private detailsService: DetailsService,
     private route: ActivatedRoute) { }
 
@@ -40,10 +41,14 @@ export class DetailsComponent implements OnInit {
     this.currentCityId.subscribe((id) => {
       this.detailsService.getDetailsbyId(id).pipe(
         map(details => {
+          this.error = false;
           this.weatherDetails$.next(details);
         })
       ).subscribe(()=> {
             this.loading = false; 
+      },(err) => {
+        this.error = true;
+        this.loading = false;
       })
     })
   }

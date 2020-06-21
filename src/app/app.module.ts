@@ -4,7 +4,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { HttpClientModule } from '@angular/common/http';
 import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
-import { AlertModule } from 'ngx-bootstrap/alert'
 import { FormsModule } from '@angular/forms';
 //  Internal Imports
 import { AppRoutingModule } from './app-routing.module';
@@ -14,7 +13,6 @@ import { PerhourTempComponent } from './components/perhour-temp/perhour-temp.com
 import { PerdayTempComponent } from './components/perday-temp/perday-temp.component';
 import { LoaderComponent } from './loader/loader.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { AlertDismissComponent } from './components/alert/alert.component';
 import { SearchComponent } from './components/search/search.component';
 import { HomeComponent } from './home/home.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
@@ -22,6 +20,7 @@ import { DetailsComponent } from './details/details.component';
 import { ListComponent } from './components/list/list.component';
 import { HomeService } from './home/home.service';
 import { DetailsService } from './details/details.service';
+import { ErrorComponent } from './components/error/error.component';
 
 
 @NgModule({
@@ -36,7 +35,7 @@ import { DetailsService } from './details/details.service';
     PerdayTempComponent,
     LoaderComponent,
     PageNotFoundComponent,
-    AlertDismissComponent
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
@@ -44,8 +43,7 @@ import { DetailsService } from './details/details.service';
     BrowserAnimationsModule,
     HttpClientModule,
     TypeaheadModule.forRoot(),
-    FormsModule,
-    AlertModule
+    FormsModule
     
   ],
   providers: [

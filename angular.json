@@ -28,10 +28,12 @@
               "src/assets"
             ],
             "styles": [
+             
               "node_modules/bootstrap/scss/bootstrap.scss",
               "src/styles.scss",
               "node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss",
               "node_modules/@fortawesome/fontawesome-free/scss/solid.scss"
+              
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",

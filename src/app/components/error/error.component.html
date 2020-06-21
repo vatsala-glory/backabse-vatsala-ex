@@ -1,0 +1,6 @@
+<div class="rotate d-flex flex-column align-items-center justify-content-center text-danger"
+[ngClass]="(type === 'error')? 'text-danger': 'text-success'">
+        <i *ngIf="type === 'error'" class="fas fa-2x fa-exclamation"></i>
+        <i *ngIf="type !== 'error'" class="fas fa-2x fa-check"></i>
+            <h3>{{message}}</h3>
+</div>

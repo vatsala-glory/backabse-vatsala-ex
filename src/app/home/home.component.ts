@@ -12,6 +12,7 @@ import { map} from 'rxjs/operators'
 export class HomeComponent implements OnInit {
   loading: boolean = true;
   cities$: Subject<any> = new Subject<any>();
+  error: boolean = false;
 
   constructor(private homeService: HomeService) { }
 
@@ -23,9 +24,12 @@ export class HomeComponent implements OnInit {
         //  Updating Cities Subject.
         map(cities =>{
           this.cities$.next(cities);
+          this.error = false;
         })
       ).subscribe(()=>{
         this.loading = false;
+      }, () => {
+        this.error = true;
       })
     });
   }

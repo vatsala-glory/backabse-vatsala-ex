@@ -9,3 +9,6 @@
 <div *ngIf="loading">
     <app-loader></app-loader>
 </div>
+<div *ngIf="error" >
+    <app-error [message]="'Oops!! Cannot fetch your details try again'" type="'error'"></app-error>
+</div>
