@@ -56,7 +56,6 @@ describe('HomeComponent', () => {
     const fixture = TestBed.createComponent(HomeComponent);
     const app = fixture.debugElement.nativeElement;   
     fixture.detectChanges();
-    console.log('89989',app);
     //expect(app.cities$.list.length).toBe(1);
   })
 });

@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AlertDismissComponent } from './alert.component';
+import { AlertModule, AlertComponent } from 'ngx-bootstrap/alert';
 
 describe('AlertComponent', () => {
   let component: AlertDismissComponent;
@@ -8,7 +9,11 @@ describe('AlertComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AlertDismissComponent ]
+      imports:[
+        AlertModule.forRoot()
+      ],
+      declarations: [ AlertDismissComponent,
+       ]
     })
     .compileComponents();
   }));

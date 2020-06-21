@@ -12,7 +12,6 @@ export class PerdayTempComponent implements OnInit {
 
   ngOnInit() {
      this.perDayListArray=  this._segregateData();
-     console.log(this.perDayData);
   }
 /**
  * Convert data day wise to iterate.
