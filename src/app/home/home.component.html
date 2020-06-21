@@ -1,6 +1,6 @@
 
 <div *ngIf="cities$ | async as cities">
-    <div *ngFor="let city of cities.list" class="border border-secondary rounded mx-3 cursor-pointer mb-1 bg-light"
+    <div *ngFor="let city of cities.list" class="border border-secondary rounded mx-3 text-sm-center cursor-pointer mb-1 bg-light"
     routerLink="/details/{{city.id}}">
         <app-list [data]="city"></app-list>
     </div>
