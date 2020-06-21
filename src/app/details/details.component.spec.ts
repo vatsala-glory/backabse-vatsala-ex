@@ -9,6 +9,7 @@ import {  ActivatedRouteStub } from '../../mocks/activated-router-stub';
 import { ActivatedRoute } from '@angular/router';
 import { of } from 'rxjs'
 import { DetailsService } from './details.service';
+import { ErrorComponent } from '../components/error/error.component';
 
 describe('DetailsComponent', () => {
   let component: DetailsComponent;
@@ -33,7 +34,8 @@ describe('DetailsComponent', () => {
         DetailsComponent,
         LoaderComponent,
         PerdayTempComponent,
-        PerhourTempComponent
+        PerhourTempComponent,
+        ErrorComponent
        ],
        providers:[
          {provide: ActivatedRoute, useValue: activatedRoute},
