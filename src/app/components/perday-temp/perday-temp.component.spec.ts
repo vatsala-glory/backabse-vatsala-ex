@@ -1,14 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PerdayTempComponent } from './perday-temp.component';
+import { PerhourTempComponent } from '../perhour-temp/perhour-temp.component';
 
 describe('PerdayTempComponent', () => {
   let component: PerdayTempComponent;
   let fixture: ComponentFixture<PerdayTempComponent>;
+  let details = require('../../../mocks/details.json');
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PerdayTempComponent ]
+      declarations: [ 
+        PerdayTempComponent,
+      PerhourTempComponent
+     ]
     })
     .compileComponents();
   }));
@@ -16,6 +21,7 @@ describe('PerdayTempComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(PerdayTempComponent);
     component = fixture.componentInstance;
+    component.perDayData = details.list;
     fixture.detectChanges();
   });
 
