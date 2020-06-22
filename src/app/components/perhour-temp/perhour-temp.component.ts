@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ForecatList } from 'src/app/details/details';
 
 @Component({
   selector: 'app-perhour-temp',
@@ -6,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./perhour-temp.component.scss']
 })
 export class PerhourTempComponent implements OnInit {
-  @Input()perHourData: any;
+  @Input()perHourData: ForecatList;
 
   constructor() { }
 

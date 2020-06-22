@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ForecatList } from 'src/app/details/details';
 
 @Component({
   selector: 'app-perday-temp',
@@ -6,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./perday-temp.component.scss']
 })
 export class PerdayTempComponent implements OnInit {
-  @Input()perDayData:any;
+  @Input()perDayData:ForecatList[];
   perDayListArray; any;
   constructor() { }
 

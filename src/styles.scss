@@ -1,5 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
-
+@import '~bootstrap/scss/functions';
+   @import '~bootstrap/scss/variables';
+   @import '~bootstrap/scss/mixins';
+   
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .cursor-pointer{
@@ -7,4 +10,13 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 .h2-fontweigh-300{
     font-weight: 300;
+}
+
+
+.city-list-bg-color--hover{
+    &:hover {
+        background-color: theme-color("info") !important;
+        opacity: 0.5;
+        color: color("white") !important;
+    }
 }

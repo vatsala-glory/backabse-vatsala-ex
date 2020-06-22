@@ -3,6 +3,7 @@ import { DetailsService } from './details.service';
 import { ActivatedRoute } from '@angular/router';
 import { map } from 'rxjs/operators';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { ForeCast } from './details';
 
 @Component({
   selector: 'app-details',
@@ -10,7 +11,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
   styleUrls: ['./details.component.scss']
 })
 export class DetailsComponent implements OnInit {
-  weatherDetails$: BehaviorSubject<any> = new BehaviorSubject<any>(null);
+  weatherDetails$: BehaviorSubject<ForeCast> = new BehaviorSubject<ForeCast>(null);
   currentCityId:Observable<string>;
   loading: boolean = true;
   error: boolean = false;

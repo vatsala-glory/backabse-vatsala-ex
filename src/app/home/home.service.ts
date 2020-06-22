@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { CityList } from './home';
-import { of, Observable } from 'rxjs';
+import { CityList, CityListResponse } from './home';
+import { of, Observable, BehaviorSubject } from 'rxjs';
 import { map, delay } from 'rxjs/operators'
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
@@ -28,7 +28,7 @@ export class HomeService {
    * 
    * @param cities - All the cities in an array;
    */
-  getCityDetails(...cities) {
+  getCityDetails(...cities): Observable<CityListResponse | any> {
     if ([...cities].length > 0) {
       return this.http.get(`${environment.apiUrl}${environment.endpoints.getCities}?id=${[...cities].join()}&units=metric&appid=${environment.apiKey}`)
         .pipe(

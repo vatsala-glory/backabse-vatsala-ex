@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HomeService } from './home.service';
-import { CityList } from './home';
-import { Subject } from 'rxjs';
+import { CityList, CityListResponse } from './home';
+import { BehaviorSubject } from 'rxjs';
 import { map} from 'rxjs/operators'
 
 @Component({
@@ -11,7 +11,7 @@ import { map} from 'rxjs/operators'
 })
 export class HomeComponent implements OnInit {
   loading: boolean = true;
-  cities$: Subject<any> = new Subject<any>();
+  cities$: BehaviorSubject<CityListResponse> = new BehaviorSubject<CityListResponse>(null);
   error: boolean = false;
 
   constructor(private homeService: HomeService) { }
