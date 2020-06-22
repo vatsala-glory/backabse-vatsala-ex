@@ -24,18 +24,19 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 Application first page
 
-![image](https://user-images.githubusercontent.com/31056784/85273774-57321380-b47e-11ea-97c0-5a2f8ead05e6.png)
+![image](https://user-images.githubusercontent.com/31056784/85307763-96795800-b4b0-11ea-8189-1f3376cda600.png)
 
 On clicking of the cities displayed. you come to next view
 
 
-![image](https://user-images.githubusercontent.com/31056784/85273641-2520b180-b47e-11ea-9b6b-2d208d02b2f8.png)
+![image](https://user-images.githubusercontent.com/31056784/85307832-af820900-b4b0-11ea-9df2-9322cab09b67.png)
+
 
 Current code coverage is as 
 ![image](https://user-images.githubusercontent.com/31056784/85273557-09b5a680-b47e-11ea-8794-2f7dd7abc0df.png)
 
 Some points regarding the application:
-
+<li>This also supports other cities, along with the one mentioned on the top </li>
 <li>The Container components are Home and Details Components </li>
 <li>Rest all th epresentational components are present in component folder</li>
 <li>So the data flow from top to bottom.</li> 
