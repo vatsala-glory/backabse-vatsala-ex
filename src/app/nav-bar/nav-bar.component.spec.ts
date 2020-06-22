@@ -2,8 +2,10 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NavBarComponent } from './nav-bar.component';
 import { SearchComponent } from '../components/search/search.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('NavBarComponent', () => {
   let component: NavBarComponent;
@@ -13,7 +15,10 @@ describe('NavBarComponent', () => {
     TestBed.configureTestingModule({
       imports:[
         FormsModule,
-        TypeaheadModule.forRoot()
+        TypeaheadModule.forRoot(),
+        ReactiveFormsModule,
+        HttpClientTestingModule,
+        RouterTestingModule
       ],
       declarations: [ 
         NavBarComponent,

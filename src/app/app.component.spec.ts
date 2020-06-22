@@ -3,8 +3,9 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { NavBarComponent} from './nav-bar/nav-bar.component';
 import { SearchComponent } from './components/search/search.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -12,7 +13,9 @@ describe('AppComponent', () => {
       imports: [
         RouterTestingModule,
         FormsModule,
-        TypeaheadModule.forRoot()
+        ReactiveFormsModule,
+        TypeaheadModule.forRoot(),
+        HttpClientTestingModule
       ],
       declarations: [
         AppComponent,
