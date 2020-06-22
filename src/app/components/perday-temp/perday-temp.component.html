@@ -1,6 +1,6 @@
 <div class="container">
     <div *ngFor="let perdayData of perDayListArray| keyvalue; let ind = index" class="row card  m-2 p-2">
-        <div class="col-xs-12 card-header cursor-pointer" id="head-{{ind}}">
+        <div class="col-xs-12 cursor-pointer pb-1" id="head-{{ind}}">
             <div data-toggle="collapse" [attr.data-target]="'#collapse-'+ ind">{{perdayData.key | date: "EEE, d"}}</div>
         </div>
         <div class="col-xs-12  collapse" [ngClass]="(ind === 0)? 'show':''" id="collapse-{{ind}}">
