@@ -3,7 +3,7 @@
         {{perHourData.dt_txt | date:"HH:mm"}}
     </div>
     <div class="col-12 text-center">
-        <img id="icon" src="http://openweathermap.org/img/w/{{perHourData.weather[0].icon}}.png" alt="Weather icon">
+        <img id="icon" src="{{imageUrl}}{{perHourData.weather[0].icon}}.png" alt="Weather icon">
     </div>
     <div class="col-12">
         {{perHourData.weather[0].description}}

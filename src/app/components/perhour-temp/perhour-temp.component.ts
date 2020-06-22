@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ForecatList } from 'src/app/details/details';
+import {  environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-perhour-temp',
@@ -8,9 +9,12 @@ import { ForecatList } from 'src/app/details/details';
 })
 export class PerhourTempComponent implements OnInit {
   @Input()perHourData: ForecatList;
+  imageUrl: string;
 
   constructor() { }
 
-  ngOnInit() {  }
+  ngOnInit() { 
+    this.imageUrl = environment.imageUrl;
+   }
 
 }
