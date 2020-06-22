@@ -33,7 +33,7 @@ describe('DetailsComponent', () => {
       declarations: [ 
         DetailsComponent,
         LoaderComponent,
-        DayViewComponent,
+        DayViewComponentrenamed,
         PerhourTempComponent,
         ErrorComponent
        ],
