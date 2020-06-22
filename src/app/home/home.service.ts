@@ -3,7 +3,7 @@ import { CityList } from './home';
 import { of, Observable } from 'rxjs';
 import { map, delay } from 'rxjs/operators'
 import { HttpClient } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
