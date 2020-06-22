@@ -25,3 +25,17 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+Application first page
+
+![image](https://user-images.githubusercontent.com/31056784/85272842-02da6400-b47d-11ea-87ce-492e6a91c640.png)
+
+On clicking of the cities displayed. you come to next view
+
+
+![image](https://user-images.githubusercontent.com/31056784/85272987-3ae1a700-b47d-11ea-8b9f-06d754fa4174.png)
+
+Current code coverage is as 
+![image](https://user-images.githubusercontent.com/31056784/85273338-bcd1d000-b47d-11ea-94b2-2025a5386744.png)
+
+
