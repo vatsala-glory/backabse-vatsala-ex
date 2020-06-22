@@ -58,4 +58,5 @@ Some points which can be improved:
 3. Accessibility to be added.
 4. BEM to be followed in case of css.
 5. The API key should not be visible. should ideaaly come in encrypted form
+6. UI Theme improvements.
 
