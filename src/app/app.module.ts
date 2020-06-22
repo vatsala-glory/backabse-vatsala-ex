@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { HttpClientModule } from '@angular/common/http';
 import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 //  Internal Imports
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +21,7 @@ import { ListComponent } from './components/list/list.component';
 import { HomeService } from './home/home.service';
 import { DetailsService } from './details/details.service';
 import { ErrorComponent } from './components/error/error.component';
+import { SearchService } from './components/search/search.service';
 
 
 @NgModule({
@@ -43,12 +44,14 @@ import { ErrorComponent } from './components/error/error.component';
     BrowserAnimationsModule,
     HttpClientModule,
     TypeaheadModule.forRoot(),
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
     
   ],
   providers: [
     HomeService,
     DetailsService,
+    SearchService
    ],
   bootstrap: [AppComponent]
 })

@@ -8,7 +8,8 @@ export const environment = {
   apiKey: '808885554400103a97cf49c31301320a',
   endpoints:{
     getCities: '/group',
-    getweather: '/forecast'
+    getweather: '/forecast',
+    getweatherbyCityName: '/weather'
   }
 };
 

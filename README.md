@@ -37,6 +37,7 @@ Current code coverage is as
 Some points regarding the application:
 
 <li>The Container components are Home and Details Components </li>
+<li>Rest all th epresentational components are present in component folder</li>
 <li>So the data flow from top to bottom.</li> 
 <li>Using the API from weather app </li>
 <li>For forecast it fetches the data for next 5 days every 3 hour</li>
@@ -45,11 +46,11 @@ Some points regarding the application:
 
 Some points which can be improved:
 
-1. Based on the API types can be more specific.
-2. The first 5 cities are hard coded. which can be moved to API.
-3. Search component can use typeahead instead of searching full string.
-4. Accessibility to be added.
-5. BEM to be followed in case of css
+
+1. The first 5 cities are hard coded. which can be moved to API.
+2. Search component can use typeahead instead of searching full string.
+3. Accessibility to be added.
+4. BEM to be followed in case of css
 
 
 
