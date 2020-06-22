@@ -3,7 +3,7 @@
     <input type="text" class="form-control" placeholder="Search City with State e.g London,UK" aria-label="Search City"
       aria-describedby="search button" formControlName = "search" (changes)="onSearchChange()">
     <div class="input-group-append">
-      <button class="btn btn-outline-secondary bg-light" type="submit" id="search-button">Search</button>
+      <button class="btn btn-outline-secondary bg-light" [disabled]="searchForm.invalid" type="submit" id="search-button">Search</button>
     </div>
 </div>
 <div *ngIf="searchForm.controls.search?.errors?.invalid" class="text-danger">
