@@ -2,11 +2,11 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ForecatList } from 'src/app/details/details';
 
 @Component({
-  selector: 'app-perday-temp',
-  templateUrl: './perday-temp.component.html',
-  styleUrls: ['./perday-temp.component.scss']
+  selector: 'app-day-view',
+  templateUrl: './day-view.component.html',
+  styleUrls: ['./day-view.component.scss']
 })
-export class PerdayTempComponent implements OnInit {
+export class DayViewComponent implements OnInit {
   @Input()perDayData:ForecatList[];
   perDayListArray; any;
   constructor() { }

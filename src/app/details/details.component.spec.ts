@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DetailsComponent } from './details.component';
 import { LoaderComponent } from '../components/loader/loader.component';
-import { PerdayTempComponent } from '../components/perday-temp/perday-temp.component';
+import { DayViewComponent } from '../components/day-view/day-view.component';
 import { PerhourTempComponent } from '../components/perhour-temp/perhour-temp.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import {  ActivatedRouteStub } from '../../mocks/activated-router-stub';
@@ -33,7 +33,7 @@ describe('DetailsComponent', () => {
       declarations: [ 
         DetailsComponent,
         LoaderComponent,
-        PerdayTempComponent,
+        DayViewComponent,
         PerhourTempComponent,
         ErrorComponent
        ],

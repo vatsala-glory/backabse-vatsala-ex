@@ -10,7 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { PerhourTempComponent } from './components/perhour-temp/perhour-temp.component';
-import { PerdayTempComponent } from './components/perday-temp/perday-temp.component';
+import { DayViewComponent } from './components/day-view/day-view.component';
 import { LoaderComponent } from './components/loader/loader.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SearchComponent } from './components/search/search.component';
@@ -33,7 +33,7 @@ import { SearchService } from './components/search/search.service';
     DetailsComponent,
     ListComponent,
     PerhourTempComponent,
-    PerdayTempComponent,
+    DayViewComponent,
     PageNotFoundComponent,
     LoaderComponent,
     ErrorComponent
