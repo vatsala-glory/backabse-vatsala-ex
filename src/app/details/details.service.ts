@@ -13,7 +13,7 @@ export class DetailsService {
   constructor(private http: HttpClient) { }
 
   getDetailsbyId(id):Observable<ForeCast | any>{
-    return this.http.get(`${environment.apiUrl}${environment.endpoints.getweather}?id=${id}&appid=${environment.apiKey}`)
+    return this.http.get(`${environment.apiUrl}${environment.endpoints.getweather}?id=${id}&units=metric&appid=${environment.apiKey}`)
     .pipe(
       map(res => res));
   }
