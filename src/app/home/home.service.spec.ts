@@ -1,12 +1,24 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed , async} from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 import { HomeService } from './home.service';
+import { of } from 'rxjs'
+
 
 describe('HomeService', () => {
-  beforeEach(() => TestBed.configureTestingModule({}));
 
+  let service: HomeService;
+  let mock = require('../../mocks/cities.json');
+  
+  beforeEach(() => TestBed.configureTestingModule({
+    imports:[HttpClientTestingModule]
+  }));
+beforeEach(() =>{
+ service = TestBed.get(HomeService);
+})
   it('should be created', () => {
-    const service: HomeService = TestBed.get(HomeService);
+    
     expect(service).toBeTruthy();
   });
+
 });

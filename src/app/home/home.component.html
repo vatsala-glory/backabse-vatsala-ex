@@ -1,7 +1,20 @@
-
-<div *ngIf="cities$ | async as cities">
-    <div *ngFor="let city of cities.list">
+<div>
+    <div class="text-center mb-3">
+        <h1>
+            BackBase Weather App
+        </h1>
+    </div>
+</div>
+<div *ngIf="cities$ | async as cities" class="mt-5">
+    <div *ngFor="let city of cities.list"
+        class="border border-secondary city-list-bg-color--hover rounded mx-3 text-sm-center text-md-left cursor-pointer mb-1 bg-light"
+        routerLink="/details/{{city.id}}">
         <app-list [data]="city"></app-list>
     </div>
 </div>
-   
+<div *ngIf="loading">
+    <app-loader></app-loader>
+</div>
+<div *ngIf="error">
+    <app-error [message]="'Oops!! Cannot fetch your details try again'" type="'error'"></app-error>
+</div>

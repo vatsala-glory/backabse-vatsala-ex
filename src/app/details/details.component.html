@@ -1,1 +1,14 @@
-<p>details works!</p>
+<div *ngIf="weatherDetails$ | async as details ">
+    <div class="text-center mb-3">
+        <h1>
+            {{details.city.name}}
+        </h1>
+    </div>
+    <app-perday-temp [perDayData]="details.list"></app-perday-temp>
+</div>
+<div *ngIf="loading">
+    <app-loader></app-loader>
+</div>
+<div *ngIf="error" >
+    <app-error [message]="'Oops!! Cannot fetch your details try again'" type="'error'"></app-error>
+</div>

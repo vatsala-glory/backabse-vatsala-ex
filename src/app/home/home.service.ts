@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { CityList } from './home';
 import { of, Observable } from 'rxjs';
-import { map } from 'rxjs/operators'
+import { map, delay } from 'rxjs/operators'
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
@@ -10,21 +10,30 @@ import { environment } from 'src/environments/environment';
 })
 export class HomeService {
 
-  constructor(private htttp: HttpClient) { }
-
-  getCityList(): Observable<CityList[]>{
+  constructor(private http: HttpClient) { }
+/**
+ * Returns teh list of all the city list for display on screen.
+ */
+  getCityList(): Observable<CityList[]> {
     return of([
-      {id:2759794},
-      {id:2968815},
-      {id:6458923},
-      {id:3054643},
-      {id:2618425}
+      { id: 2759794 },
+      { id: 2968815 },
+      { id: 6458923 },
+      { id: 3054643 },
+      { id: 2618425 }
     ])
   }
 
-  getCityDetails(...cities){
-    return this.htttp.get(`${environment.apiUrl}${environment.endpoints.getCities}?id=${[...cities].join()}&units=metric&appid=${environment.apiKey}`)
-    .pipe(
-      map(res => res));
+  /**
+   * 
+   * @param cities - All the cities in an array;
+   */
+  getCityDetails(...cities) {
+    if ([...cities].length > 0) {
+      return this.http.get(`${environment.apiUrl}${environment.endpoints.getCities}?id=${[...cities].join()}&units=metric&appid=${environment.apiKey}`)
+        .pipe(
+          delay(300),
+          map(res => res));
+    }
   }
 }

@@ -1,0 +1,11 @@
+@import '~bootstrap/scss/functions';
+   @import '~bootstrap/scss/variables';
+   @import '~bootstrap/scss/mixins';
+
+.city-list-bg-color--hover{
+    &:hover {
+        background-color: theme-color("info") !important;
+        opacity: 0.5;
+        color: color("white") !important;
+    }
+}

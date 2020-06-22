@@ -10,19 +10,26 @@ import { map} from 'rxjs/operators'
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  loading: boolean;
+  loading: boolean = true;
   cities$: Subject<any> = new Subject<any>();
+  error: boolean = false;
 
   constructor(private homeService: HomeService) { }
 
   ngOnInit() {
+    //  API Call to get the list of  all the cities.
     this.homeService.getCityList().subscribe(res => {
+      //  API call for the details of all the selected Cities.
       this.homeService.getCityDetails(res.map(response => response.id)).pipe(
+        //  Updating Cities Subject.
         map(cities =>{
           this.cities$.next(cities);
+          this.error = false;
         })
       ).subscribe(()=>{
         this.loading = false;
+      }, () => {
+        this.error = true;
       })
     });
   }
