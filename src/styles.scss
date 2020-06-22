@@ -15,7 +15,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .city-list-bg-color--hover{
     &:hover {
-        background-color: theme-color("info") !important;
+        background-color: theme-color("dark") !important;
         opacity: 0.5;
         color: color("white") !important;
     }

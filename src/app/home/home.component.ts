@@ -23,6 +23,7 @@ export class HomeComponent implements OnInit {
       this.homeService.getCityDetails(res.map(response => response.id)).pipe(
         //  Updating Cities Subject.
         map(cities =>{
+          //  Updating Behaviour Subject.
           this.cities$.next(cities);
           this.error = false;
         })

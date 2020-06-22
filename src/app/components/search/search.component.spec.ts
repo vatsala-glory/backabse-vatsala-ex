@@ -11,6 +11,8 @@ import { Routes } from '@angular/router';
 import { ListComponent } from '../list/list.component';
 import { ErrorComponent } from '../error/error.component';
 import { LoaderComponent } from 'src/app/loader/loader.component';
+import { SearchService } from './search.service';
+import { HttpClient } from '@angular/common/http';
 
 describe('SearchComponent', () => {
   let component: SearchComponent;
@@ -34,6 +36,9 @@ describe('SearchComponent', () => {
         ListComponent,
         ErrorComponent,
         LoaderComponent
+      ],
+      providers:[
+       SearchService
       ]
     })
     .compileComponents();
@@ -48,4 +53,12 @@ describe('SearchComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('should get the details and redirect to navigate', () => {
+    //Arrange
+    component.searchForm.get('search').setValue('Test, Test');
+    //Act
+    component.searchCity();
+
+    //  Assert.
+  })
 });
