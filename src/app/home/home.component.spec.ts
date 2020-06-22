@@ -2,9 +2,10 @@ import { async, ComponentFixture, TestBed ,inject } from '@angular/core/testing'
 
 import { HomeComponent } from './home.component';
 import { ListComponent } from '../components/list/list.component';
-import { LoaderComponent } from '../loader/loader.component';
+
 import { ErrorComponent } from '../components/error/error.component';
 import { RouterTestingModule } from '@angular/router/testing';
+import { LoaderComponent } from '../components/loader/loader.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import {  HomeService } from './home.service';
 import { Routes } from '@angular/router';
@@ -16,7 +17,7 @@ describe('HomeComponent', () => {
   const routes: Routes = [
     {path:'', component: HomeComponent}
   ];
-  let mock = require('../../mocks/cities.json');
+  let mock = require('../../mocks/weather/cities.json');
 
   class HomeServiceSpy {
     

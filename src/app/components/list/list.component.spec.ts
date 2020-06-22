@@ -5,7 +5,7 @@ import { ListComponent } from './list.component';
 describe('ListComponent', () => {
   let component: ListComponent;
   let fixture: ComponentFixture<ListComponent>;
-  let mock = require('../../../mocks/cities.json')
+  let mock = require('../../../mocks/weather/cities.json')
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({

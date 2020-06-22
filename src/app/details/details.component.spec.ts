@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DetailsComponent } from './details.component';
-import { LoaderComponent } from '../loader/loader.component';
+import { LoaderComponent } from '../components/loader/loader.component';
 import { PerdayTempComponent } from '../components/perday-temp/perday-temp.component';
 import { PerhourTempComponent } from '../components/perhour-temp/perhour-temp.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
@@ -16,7 +16,7 @@ describe('DetailsComponent', () => {
   let fixture: ComponentFixture<DetailsComponent>;
   let activatedRoute: ActivatedRouteStub;
 
-  let mock = require('../../mocks/details.json');
+  let mock = require('../../mocks/weather/details.json');
 
   class DetailServiceStub {
     getDetailsbyId = jasmine.createSpy('getDetailsbyId').and.returnValue(of(mock));

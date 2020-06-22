@@ -6,7 +6,7 @@ import { PerhourTempComponent } from '../perhour-temp/perhour-temp.component';
 describe('PerdayTempComponent', () => {
   let component: PerdayTempComponent;
   let fixture: ComponentFixture<PerdayTempComponent>;
-  let details = require('../../../mocks/details.json');
+  let details = require('../../../mocks/weather/details.json');
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({

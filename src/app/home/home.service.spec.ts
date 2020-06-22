@@ -8,7 +8,7 @@ import { of } from 'rxjs'
 describe('HomeService', () => {
 
   let service: HomeService;
-  let mock = require('../../mocks/cities.json');
+  let mock = require('../../mocks/weather/cities.json');
   
   beforeEach(() => TestBed.configureTestingModule({
     imports:[HttpClientTestingModule]

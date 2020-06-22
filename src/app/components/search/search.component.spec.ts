@@ -10,8 +10,8 @@ import {  HomeComponent } from '../../home/home.component';
 import { Routes } from '@angular/router';
 import { ListComponent } from '../list/list.component';
 import { ErrorComponent } from '../error/error.component';
-import { LoaderComponent } from 'src/app/loader/loader.component';
-import { SearchService } from './search.service';
+import { LoaderComponent } from '../loader/loader.component';
+import {  SearchService } from './search.service';
 import { HttpClient } from '@angular/common/http';
 
 describe('SearchComponent', () => {

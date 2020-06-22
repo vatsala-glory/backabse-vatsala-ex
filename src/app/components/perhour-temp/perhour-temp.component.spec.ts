@@ -5,7 +5,7 @@ import { PerhourTempComponent } from './perhour-temp.component';
 describe('PerhourTempComponent', () => {
   let component: PerhourTempComponent;
   let fixture: ComponentFixture<PerhourTempComponent>;
-  let mock = require('../../../mocks/details.json');
+  let mock = require('../../../mocks/weather/details.json');
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({

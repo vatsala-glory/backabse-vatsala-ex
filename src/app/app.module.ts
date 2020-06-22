@@ -11,11 +11,11 @@ import { AppComponent } from './app.component';
 
 import { PerhourTempComponent } from './components/perhour-temp/perhour-temp.component';
 import { PerdayTempComponent } from './components/perday-temp/perday-temp.component';
-import { LoaderComponent } from './loader/loader.component';
+import { LoaderComponent } from './components/loader/loader.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SearchComponent } from './components/search/search.component';
 import { HomeComponent } from './home/home.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { DetailsComponent } from './details/details.component';
 import { ListComponent } from './components/list/list.component';
 import { HomeService } from './home/home.service';
@@ -34,8 +34,8 @@ import { SearchService } from './components/search/search.service';
     ListComponent,
     PerhourTempComponent,
     PerdayTempComponent,
-    LoaderComponent,
     PageNotFoundComponent,
+    LoaderComponent,
     ErrorComponent
   ],
   imports: [
